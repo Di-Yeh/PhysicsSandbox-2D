@@ -15,7 +15,7 @@ void Box::UpdateBox(float dt, float gravity)
     }
 
     // 重力只影响 Y 轴
-    velocity.y += 9.8f * 100.0f * dt; // 这里的 100.0 是像素/米 的比例转换
+    velocity.y += gravity * 100.0f * dt; // 这里的 100.0 是像素/米 的比例转换
 
     // 更新位置
     position += velocity * dt;
